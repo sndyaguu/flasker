@@ -1,0 +1,65 @@
+HP@DESKTOP-8KREU4P MINGW64 /c/flasker
+
+$ python -m venv virt  			'Create virtual environment
+
+$ source virt/scripts/activate 		'Activate virtual environment
+
+$ deactivate  				'Deactivate virtual environment
+
+$ source virt/scripts/activate       	'Activate again
+
+$ pip  freeze				'See things installed in virt but show nothing
+
+$ pip install flask			' Install flask for this virtual env but i didn't
+
+$ pip freeze				'See now
+
+$ export FLASK_ENV=development		'To run flask server without rerunnig it any time we edit app
+$ export FLASK_APP=hello.py
+$ flask run
+
+********************
+No 3
+Version Control
+$ deactivate		'to deactivate virtual environment
+$ cd ~/			'to change from /c/flasker to c:/users/HP
+$ pwd
+/c/Users/HP
+$ mkdir .ssh		'make a directory to hold the SSH key. Its a hidden directory.
+$ cd .ssh		'move into the directory to create a key
+$ ssh-keygen.exe	'this create the key. Enter thrice without password to complete the messages
+$ ls			'to view the private and the public keys. The public is the one we need for github
+  id_rsa   id_rsa.pub
+$ cat id_rsa.pub	'to see the actual key content. copy it
+
+Login to github in browser
+Click dd arrow under your profile and click on settings
+Click SSH and GPG keys
+Click New SSH key to add a new one
+Place cursor at the begining of the first letter, right click and paste
+Click Add SSH key
+Enter password and confirm it
+
+Back to the terminal to setup our  version control
+$ cd /c/flasker 	'to move back to our flask project
+$ ls			'to list directory. We need to push all to github except the virtual env virt/
+  __pycache__/  doc.txt  flaskerBKUP/  hello.py  templates/  virt/
+$ touch .gitignore	'to create the a hidden file that will allow us ignore virt/. see the file in VSCode
+
+Open the file in VSCode and type below, and save 
+.gitignore
+virt/
+
+Back to terminal to continue setting up the version control for /c/flasker. Note: each project has its own
+$ source virt/scripts/activate			'to activate virtual environment
+$ git config --global user.name "Agu Sunday"	
+$ git config --global user.email sndyaguu@gmail.com
+$ git config --global push.default matching
+$ git config --global alias.co checkout
+$ git init						'to create the local git repo
+$ git add .						'to turn it on
+$ git commit -am 'initial commit'
+
+
+
+
