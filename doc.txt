@@ -60,6 +60,23 @@ $ git init						'to create the local git repo
 $ git add .						'to turn it on
 $ git commit -am 'initial commit'
 
+Now push git to github. On github
+Click dd arrow under your profile and click on Your Repositories
+Click New
+Name it flasker
+Click Create repository
+
+On the terminal
+$ git remote add origin https://github.com/sndyaguu/flasker.git
+$ git branch -M main
+$ git push -u origin main
+
+For subsequent changes in our code in local git repo
+Change something in our 500.html file
+Peform the 3 steps below on terminal 
+$ git add .
+
+
 
 
 
